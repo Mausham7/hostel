@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hostel Booking</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    #header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    #hostelName {
+      font-size: 24px;
+      color: red;
+      text-transform: capitalize;
+    }
+    
+    #hostelContactNo {
+      font-size: 14px;
+    }
+    
+    #hostelLocation {
+      margin-top: 5px;
+      font-size: 16px;
+    }
+    
+    #hostelEmail {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    
+    #registrationTitle {
+      text-align: center;
+      margin-bottom: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div>
+      <span id="hostelName">Mermadian Boys Hostel (Feel Like Home)</span>
+      <br>
+      <span id="hostelLocation">Kathmandu, Nepal, Buddhanagar</span>
+      <br>
+      <span id="hostelEmail">Email: mermadianboyhostel.ktm@gmail.com</span>
+      <br>
+      <span id="hostelContactNo">Contact No: 9860433085</span>
+    </div>
+    <div>
+      <img src="D:\web project\boys.jpg" alt="Hostel Image" width="200">
+    </div>
+  </div>
+  
+  <div id="registrationTitle">
+    <h2>User Registration</h2>
+  </div>
+  
+  <form id="bookingForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    
+    <label for="checkInDate">Check-in Date:</label>
+    <input type="date" id="checkInDate" required>
+    
+    <label for="checkOutDate">Check-out Date:</label>
+    <input type="date" id="checkOutDate" required>
+    
+    <label for="guests">Number of Guests:</label>
+    <input type="number" id="guests" required>
+    
+    <button type="submit">Book Now</button>
+  </form>
+
+  <script>
+    // JavaScript code for form submission
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Handle form submission here
+      // You can add your own code to process the form data or make an API call
+      alert('Booking submitted successfully!');
+      bookingForm.reset();
+    });
+  </script>
+</body>
+</html>
